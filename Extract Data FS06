@@ -1,0 +1,1895 @@
+Sub extractFS06()
+
+macro = Range("macro")
+file = Range("filedirect")
+Filename = Range("filename")
+file1 = Range("filedirect1")
+filename1 = Range("filename1")
+file2 = Range("filedirect2")
+filename2 = Range("filename2")
+file3 = Range("filedirect3")
+filename3 = Range("filename3")
+file4 = Range("filedirect4")
+filename4 = Range("filename4")
+file5 = Range("filedirect5")
+filename5 = Range("filename5")
+file6 = Range("filedirect6")
+filename6 = Range("filename6")
+file7 = Range("filedirect7")
+filename7 = Range("filename7")
+file8 = Range("filedirect8")
+filename8 = Range("filename8")
+file9 = Range("filedirect9")
+filename9 = Range("filename9")
+file10 = Range("filedirect10")
+Filename10 = Range("filename10")
+
+Dim lastRow As Long
+Dim lastRow1 As Long
+Dim lastRow2 As Long
+Dim lastRow3 As Long
+Dim lastRow4 As Long
+Dim lastRow5 As Long
+Dim lastRow6 As Long
+Dim lastRow8 As Long
+
+strPath = Range("G5")
+strSave = Range("G6")
+StrsheetTBPriori4 = Range("G9").Value
+StrsheetTBCurrenti4 = Range("G10").Value
+
+Workbooks.Open (file1), UpdateLinks:=False
+
+Workbooks(macro).Activate
+
+Workbooks.Open (file2), UpdateLinks:=False
+
+Workbooks(macro).Activate
+
+Workbooks.Open (file4), UpdateLinks:=False
+
+Workbooks(macro).Activate
+
+Workbooks.Open (file5), UpdateLinks:=False
+
+Workbooks(macro).Activate
+
+'FXrate
+Workbooks(filename1).Activate
+Sheets("FX Rate").Select
+Cells.Select
+    Application.CutCopyMode = False
+    Selection.ClearContents
+
+Workbooks(filename2).Activate
+Cells.Select
+    Selection.Copy
+
+Workbooks(filename1).Activate
+Sheets("FX Rate").Select
+Cells.Select
+    ActiveSheet.Paste
+
+'TB lastmonth
+Workbooks(filename1).Activate
+Sheets("TB i17 Last Month").Select
+Cells.Select
+    Application.CutCopyMode = False
+    Selection.ClearContents
+
+Workbooks(macro).Activate
+
+Workbooks.Open (file6), UpdateLinks:=False
+Sheets("sheet1").Select
+
+If ActiveSheet.FilterMode Then ActiveSheet.ShowAllData
+
+Cells.Select
+    With Selection
+        .HorizontalAlignment = xlGeneral
+        .VerticalAlignment = xlBottom
+        .WrapText = False
+        .Orientation = 0
+        .AddIndent = False
+        .IndentLevel = 1
+        .ShrinkToFit = False
+        .ReadingOrder = xlContext
+        .MergeCells = False
+    End With
+    With Selection
+        .HorizontalAlignment = xlGeneral
+        .VerticalAlignment = xlBottom
+        .WrapText = False
+        .Orientation = 0
+        .AddIndent = False
+        .IndentLevel = 1
+        .ShrinkToFit = False
+        .ReadingOrder = xlContext
+        .MergeCells = False
+    End With
+    With Selection
+        .HorizontalAlignment = xlGeneral
+        .VerticalAlignment = xlTop
+        .WrapText = False
+        .Orientation = 0
+        .AddIndent = False
+        .IndentLevel = 0
+        .ShrinkToFit = False
+        .ReadingOrder = xlContext
+        .MergeCells = False
+    End With
+    With Selection
+        .HorizontalAlignment = xlGeneral
+        .VerticalAlignment = xlTop
+        .WrapText = False
+        .Orientation = 0
+        .AddIndent = False
+        .IndentLevel = 0
+        .ShrinkToFit = False
+        .ReadingOrder = xlContext
+        .MergeCells = False
+    End With
+    With Selection
+        .HorizontalAlignment = xlGeneral
+        .VerticalAlignment = xlTop
+        .WrapText = False
+        .Orientation = 0
+        .AddIndent = False
+        .IndentLevel = 0
+        .ShrinkToFit = False
+        .ReadingOrder = xlContext
+        .MergeCells = False
+    End With
+    With Selection
+        .HorizontalAlignment = xlGeneral
+        .VerticalAlignment = xlTop
+        .WrapText = False
+        .Orientation = 0
+        .AddIndent = False
+        .IndentLevel = 0
+        .ShrinkToFit = False
+        .ReadingOrder = xlContext
+        .MergeCells = False
+    End With
+    With Selection
+        .HorizontalAlignment = xlGeneral
+        .VerticalAlignment = xlTop
+        .WrapText = False
+        .Orientation = 0
+        .AddIndent = False
+        .IndentLevel = 0
+        .ShrinkToFit = False
+        .ReadingOrder = xlContext
+        .MergeCells = False
+    End With
+    With Selection
+        .HorizontalAlignment = xlGeneral
+        .VerticalAlignment = xlTop
+        .WrapText = False
+        .Orientation = 0
+        .AddIndent = False
+        .IndentLevel = 0
+        .ShrinkToFit = False
+        .ReadingOrder = xlContext
+        .MergeCells = False
+    End With
+    With Selection
+        .HorizontalAlignment = xlGeneral
+        .VerticalAlignment = xlTop
+        .WrapText = False
+        .Orientation = 0
+        .AddIndent = False
+        .IndentLevel = 0
+        .ShrinkToFit = False
+        .ReadingOrder = xlContext
+        .MergeCells = False
+    End With
+    With Selection
+        .HorizontalAlignment = xlGeneral
+        .VerticalAlignment = xlTop
+        .WrapText = False
+        .Orientation = 0
+        .AddIndent = False
+        .IndentLevel = 0
+        .ShrinkToFit = False
+        .ReadingOrder = xlContext
+        .MergeCells = False
+    End With
+    With Selection
+        .HorizontalAlignment = xlGeneral
+        .VerticalAlignment = xlTop
+        .WrapText = False
+        .Orientation = 0
+        .AddIndent = False
+        .IndentLevel = 0
+        .ShrinkToFit = False
+        .ReadingOrder = xlContext
+        .MergeCells = False
+    End With
+    With Selection
+        .HorizontalAlignment = xlGeneral
+        .VerticalAlignment = xlTop
+        .WrapText = False
+        .Orientation = 0
+        .AddIndent = False
+        .IndentLevel = 0
+        .ShrinkToFit = False
+        .ReadingOrder = xlContext
+        .MergeCells = False
+    End With
+    With Selection
+        .HorizontalAlignment = xlGeneral
+        .VerticalAlignment = xlTop
+        .WrapText = False
+        .Orientation = 0
+        .AddIndent = False
+        .IndentLevel = 0
+        .ShrinkToFit = False
+        .ReadingOrder = xlContext
+        .MergeCells = False
+    End With
+    With Selection
+        .HorizontalAlignment = xlGeneral
+        .VerticalAlignment = xlTop
+        .WrapText = False
+        .Orientation = 0
+        .AddIndent = False
+        .IndentLevel = 0
+        .ShrinkToFit = False
+        .ReadingOrder = xlContext
+        .MergeCells = False
+    End With
+    With Selection
+        .HorizontalAlignment = xlGeneral
+        .VerticalAlignment = xlTop
+        .WrapText = False
+        .Orientation = 0
+        .AddIndent = False
+        .IndentLevel = 0
+        .ShrinkToFit = False
+        .ReadingOrder = xlContext
+        .MergeCells = False
+    End With
+    With Selection
+        .HorizontalAlignment = xlGeneral
+        .VerticalAlignment = xlTop
+        .WrapText = False
+        .Orientation = 0
+        .AddIndent = False
+        .IndentLevel = 0
+        .ShrinkToFit = False
+        .ReadingOrder = xlContext
+        .MergeCells = False
+    End With
+    With Selection
+        .HorizontalAlignment = xlGeneral
+        .VerticalAlignment = xlTop
+        .WrapText = False
+        .Orientation = 0
+        .AddIndent = False
+        .IndentLevel = 0
+        .ShrinkToFit = False
+        .ReadingOrder = xlContext
+        .MergeCells = False
+    End With
+    With Selection
+        .HorizontalAlignment = xlGeneral
+        .VerticalAlignment = xlTop
+        .WrapText = False
+        .Orientation = 0
+        .AddIndent = False
+        .IndentLevel = 0
+        .ShrinkToFit = False
+        .ReadingOrder = xlContext
+        .MergeCells = False
+    End With
+    With Selection
+        .HorizontalAlignment = xlGeneral
+        .VerticalAlignment = xlTop
+        .WrapText = False
+        .Orientation = 0
+        .AddIndent = False
+        .IndentLevel = 0
+        .ShrinkToFit = False
+        .ReadingOrder = xlContext
+        .MergeCells = False
+    End With
+    With Selection
+        .HorizontalAlignment = xlGeneral
+        .VerticalAlignment = xlTop
+        .WrapText = False
+        .Orientation = 0
+        .AddIndent = False
+        .IndentLevel = 0
+        .ShrinkToFit = False
+        .ReadingOrder = xlContext
+        .MergeCells = False
+    End With
+    With Selection
+        .HorizontalAlignment = xlGeneral
+        .VerticalAlignment = xlTop
+        .WrapText = False
+        .Orientation = 0
+        .AddIndent = False
+        .IndentLevel = 0
+        .ShrinkToFit = False
+        .ReadingOrder = xlContext
+        .MergeCells = False
+    End With
+    With Selection
+        .HorizontalAlignment = xlGeneral
+        .VerticalAlignment = xlTop
+        .WrapText = False
+        .Orientation = 0
+        .AddIndent = False
+        .IndentLevel = 0
+        .ShrinkToFit = False
+        .ReadingOrder = xlContext
+        .MergeCells = False
+    End With
+    With Selection
+        .HorizontalAlignment = xlGeneral
+        .VerticalAlignment = xlTop
+        .WrapText = False
+        .Orientation = 0
+        .AddIndent = False
+        .IndentLevel = 0
+        .ShrinkToFit = False
+        .ReadingOrder = xlContext
+        .MergeCells = False
+    End With
+    With Selection
+        .HorizontalAlignment = xlGeneral
+        .VerticalAlignment = xlTop
+        .WrapText = False
+        .Orientation = 0
+        .AddIndent = False
+        .IndentLevel = 0
+        .ShrinkToFit = False
+        .ReadingOrder = xlContext
+        .MergeCells = False
+    End With
+    With Selection
+        .HorizontalAlignment = xlGeneral
+        .VerticalAlignment = xlTop
+        .WrapText = False
+        .Orientation = 0
+        .AddIndent = False
+        .IndentLevel = 0
+        .ShrinkToFit = False
+        .ReadingOrder = xlContext
+        .MergeCells = False
+    End With
+    With Selection
+        .HorizontalAlignment = xlGeneral
+        .VerticalAlignment = xlTop
+        .WrapText = False
+        .Orientation = 0
+        .AddIndent = False
+        .IndentLevel = 0
+        .ShrinkToFit = False
+        .ReadingOrder = xlContext
+        .MergeCells = False
+    End With
+    With Selection
+        .HorizontalAlignment = xlGeneral
+        .VerticalAlignment = xlTop
+        .WrapText = False
+        .Orientation = 0
+        .AddIndent = False
+        .IndentLevel = 0
+        .ShrinkToFit = False
+        .ReadingOrder = xlContext
+        .MergeCells = False
+    End With
+    With Selection
+        .HorizontalAlignment = xlGeneral
+        .VerticalAlignment = xlTop
+        .WrapText = False
+        .Orientation = 0
+        .AddIndent = False
+        .IndentLevel = 0
+        .ShrinkToFit = False
+        .ReadingOrder = xlContext
+        .MergeCells = False
+    End With
+    With Selection
+        .HorizontalAlignment = xlGeneral
+        .VerticalAlignment = xlTop
+        .WrapText = False
+        .Orientation = 0
+        .AddIndent = False
+        .IndentLevel = 0
+        .ShrinkToFit = False
+        .ReadingOrder = xlContext
+        .MergeCells = False
+    End With
+    With Selection
+        .HorizontalAlignment = xlGeneral
+        .VerticalAlignment = xlTop
+        .WrapText = False
+        .Orientation = 0
+        .AddIndent = False
+        .IndentLevel = 0
+        .ShrinkToFit = False
+        .ReadingOrder = xlContext
+        .MergeCells = False
+    End With
+    With Selection
+        .HorizontalAlignment = xlGeneral
+        .VerticalAlignment = xlTop
+        .WrapText = False
+        .Orientation = 0
+        .AddIndent = False
+        .IndentLevel = 0
+        .ShrinkToFit = False
+        .ReadingOrder = xlContext
+        .MergeCells = False
+    End With
+    With Selection
+        .HorizontalAlignment = xlGeneral
+        .VerticalAlignment = xlTop
+        .WrapText = False
+        .Orientation = 0
+        .AddIndent = False
+        .IndentLevel = 0
+        .ShrinkToFit = False
+        .ReadingOrder = xlContext
+        .MergeCells = False
+    End With
+    With Selection
+        .HorizontalAlignment = xlGeneral
+        .VerticalAlignment = xlBottom
+        .WrapText = False
+        .Orientation = 0
+        .AddIndent = False
+        .IndentLevel = 1
+        .ShrinkToFit = False
+        .ReadingOrder = xlContext
+        .MergeCells = False
+    End With
+    With Selection
+        .HorizontalAlignment = xlGeneral
+        .VerticalAlignment = xlBottom
+        .WrapText = False
+        .Orientation = 0
+        .AddIndent = False
+        .IndentLevel = 1
+        .ShrinkToFit = False
+        .ReadingOrder = xlContext
+        .MergeCells = False
+    End With
+    With Selection
+        .HorizontalAlignment = xlGeneral
+        .VerticalAlignment = xlBottom
+        .WrapText = False
+        .Orientation = 0
+        .AddIndent = False
+        .IndentLevel = 1
+        .ShrinkToFit = False
+        .ReadingOrder = xlContext
+        .MergeCells = False
+    End With
+    With Selection
+        .HorizontalAlignment = xlGeneral
+        .VerticalAlignment = xlBottom
+        .WrapText = False
+        .Orientation = 0
+        .AddIndent = False
+        .IndentLevel = 1
+        .ShrinkToFit = False
+        .ReadingOrder = xlContext
+        .MergeCells = False
+    End With
+    With Selection
+        .HorizontalAlignment = xlGeneral
+        .VerticalAlignment = xlTop
+        .WrapText = False
+        .Orientation = 0
+        .AddIndent = False
+        .IndentLevel = 0
+        .ShrinkToFit = False
+        .ReadingOrder = xlContext
+        .MergeCells = False
+    End With
+    With Selection
+        .HorizontalAlignment = xlGeneral
+        .VerticalAlignment = xlTop
+        .WrapText = False
+        .Orientation = 0
+        .AddIndent = False
+        .IndentLevel = 0
+        .ShrinkToFit = False
+        .ReadingOrder = xlContext
+        .MergeCells = False
+    End With
+    With Selection
+        .HorizontalAlignment = xlGeneral
+        .VerticalAlignment = xlTop
+        .WrapText = False
+        .Orientation = 0
+        .AddIndent = False
+        .IndentLevel = 0
+        .ShrinkToFit = False
+        .ReadingOrder = xlContext
+        .MergeCells = False
+    End With
+    With Selection
+        .HorizontalAlignment = xlGeneral
+        .VerticalAlignment = xlTop
+        .WrapText = False
+        .Orientation = 0
+        .AddIndent = False
+        .IndentLevel = 0
+        .ShrinkToFit = False
+        .ReadingOrder = xlContext
+        .MergeCells = False
+    End With
+    With Selection
+        .HorizontalAlignment = xlGeneral
+        .VerticalAlignment = xlTop
+        .WrapText = False
+        .Orientation = 0
+        .AddIndent = False
+        .IndentLevel = 0
+        .ShrinkToFit = False
+        .ReadingOrder = xlContext
+        .MergeCells = False
+    End With
+    With Selection
+        .HorizontalAlignment = xlGeneral
+        .VerticalAlignment = xlTop
+        .WrapText = False
+        .Orientation = 0
+        .AddIndent = False
+        .IndentLevel = 0
+        .ShrinkToFit = False
+        .ReadingOrder = xlContext
+        .MergeCells = False
+    End With
+    With Selection
+        .HorizontalAlignment = xlGeneral
+        .VerticalAlignment = xlTop
+        .WrapText = False
+        .Orientation = 0
+        .AddIndent = False
+        .IndentLevel = 0
+        .ShrinkToFit = False
+        .ReadingOrder = xlContext
+        .MergeCells = False
+    End With
+    With Selection
+        .HorizontalAlignment = xlGeneral
+        .VerticalAlignment = xlTop
+        .WrapText = False
+        .Orientation = 0
+        .AddIndent = False
+        .IndentLevel = 0
+        .ShrinkToFit = False
+        .ReadingOrder = xlContext
+        .MergeCells = False
+    End With
+    With Selection
+        .HorizontalAlignment = xlGeneral
+        .VerticalAlignment = xlTop
+        .WrapText = False
+        .Orientation = 0
+        .AddIndent = False
+        .IndentLevel = 0
+        .ShrinkToFit = False
+        .ReadingOrder = xlContext
+        .MergeCells = False
+    End With
+    With Selection
+        .HorizontalAlignment = xlGeneral
+        .VerticalAlignment = xlTop
+        .WrapText = False
+        .Orientation = 0
+        .AddIndent = False
+        .IndentLevel = 0
+        .ShrinkToFit = False
+        .ReadingOrder = xlContext
+        .MergeCells = False
+    End With
+    With Selection
+        .HorizontalAlignment = xlGeneral
+        .VerticalAlignment = xlTop
+        .WrapText = False
+        .Orientation = 0
+        .AddIndent = False
+        .IndentLevel = 0
+        .ShrinkToFit = False
+        .ReadingOrder = xlContext
+        .MergeCells = False
+    End With
+    With Selection
+        .HorizontalAlignment = xlGeneral
+        .VerticalAlignment = xlTop
+        .WrapText = False
+        .Orientation = 0
+        .AddIndent = False
+        .IndentLevel = 0
+        .ShrinkToFit = False
+        .ReadingOrder = xlContext
+        .MergeCells = False
+    End With
+    With Selection
+        .HorizontalAlignment = xlGeneral
+        .VerticalAlignment = xlBottom
+        .WrapText = False
+        .Orientation = 0
+        .AddIndent = False
+        .IndentLevel = 1
+        .ShrinkToFit = False
+        .ReadingOrder = xlContext
+        .MergeCells = False
+    End With
+    With Selection
+        .HorizontalAlignment = xlGeneral
+        .VerticalAlignment = xlBottom
+        .WrapText = False
+        .Orientation = 0
+        .AddIndent = False
+        .IndentLevel = 1
+        .ShrinkToFit = False
+        .ReadingOrder = xlContext
+        .MergeCells = False
+    End With
+    With Selection
+        .HorizontalAlignment = xlGeneral
+        .VerticalAlignment = xlBottom
+        .WrapText = False
+        .Orientation = 0
+        .AddIndent = False
+        .IndentLevel = 1
+        .ShrinkToFit = False
+        .ReadingOrder = xlContext
+        .MergeCells = False
+    End With
+    With Selection
+        .HorizontalAlignment = xlGeneral
+        .VerticalAlignment = xlBottom
+        .WrapText = False
+        .Orientation = 0
+        .AddIndent = False
+        .IndentLevel = 1
+        .ShrinkToFit = False
+        .ReadingOrder = xlContext
+        .MergeCells = False
+    End With
+    With Selection
+        .HorizontalAlignment = xlGeneral
+        .VerticalAlignment = xlBottom
+        .WrapText = False
+        .Orientation = 0
+        .AddIndent = False
+        .IndentLevel = 1
+        .ShrinkToFit = False
+        .ReadingOrder = xlContext
+        .MergeCells = False
+    End With
+    With Selection
+        .HorizontalAlignment = xlGeneral
+        .VerticalAlignment = xlBottom
+        .WrapText = False
+        .Orientation = 0
+        .AddIndent = False
+        .IndentLevel = 1
+        .ShrinkToFit = False
+        .ReadingOrder = xlContext
+        .MergeCells = False
+    End With
+    With Selection
+        .HorizontalAlignment = xlGeneral
+        .VerticalAlignment = xlBottom
+        .WrapText = False
+        .Orientation = 0
+        .AddIndent = False
+        .IndentLevel = 1
+        .ShrinkToFit = False
+        .ReadingOrder = xlContext
+        .MergeCells = False
+    End With
+    With Selection
+        .HorizontalAlignment = xlGeneral
+        .VerticalAlignment = xlBottom
+        .WrapText = False
+        .Orientation = 0
+        .AddIndent = False
+        .IndentLevel = 1
+        .ShrinkToFit = False
+        .ReadingOrder = xlContext
+        .MergeCells = False
+    End With
+    With Selection
+        .HorizontalAlignment = xlGeneral
+        .VerticalAlignment = xlBottom
+        .WrapText = False
+        .Orientation = 0
+        .AddIndent = False
+        .IndentLevel = 1
+        .ShrinkToFit = False
+        .ReadingOrder = xlContext
+        .MergeCells = False
+    End With
+    With Selection
+        .HorizontalAlignment = xlGeneral
+        .VerticalAlignment = xlBottom
+        .WrapText = False
+        .Orientation = 0
+        .AddIndent = False
+        .IndentLevel = 1
+        .ShrinkToFit = False
+        .ReadingOrder = xlContext
+        .MergeCells = False
+    End With
+    Selection.UnMerge
+
+Cells.Select
+    Selection.Copy
+        
+Workbooks(macro).Activate
+        
+Workbooks(filename1).Activate
+Sheets("TB i17 Last Month").Select
+    Cells.Select
+    Selection.PasteSpecial Paste:=xlPasteValues, Operation:=xlNone, SkipBlanks _
+        :=False, Transpose:=False
+
+Workbooks.Open (file7), UpdateLinks:=False
+Sheets("AAE_EXPCOMP_CASHFLOW_DRIVER").Select
+Cells.Select
+    Range("E2").Activate
+    Selection.Replace What:="ND~", Replacement:="ND", LookAt:=xlPart, _
+        SearchOrder:=xlByRows, MatchCase:=False, SearchFormat:=False, _
+        ReplaceFormat:=False, FormulaVersion:=xlReplaceFormula2
+
+Workbooks(macro).Activate
+
+Workbooks.Open (file7), UpdateLinks:=False
+Workbooks(filename7).Activate
+Sheets("AAE_EXPCOMP_CASHFLOW_DRIVER").Select
+lastRow8 = Range("R" & Rows.Count).End(xlUp).Row
+Range("S2").Select
+ActiveCell.FormulaR1C1 = "CONCATE"
+Range("S3").Select
+ActiveCell.FormulaR1C1 = "=CONCAT(IF(RC[-9]=""ND~"",""ND"",RC[-9]),""_"",IF(RC[-8]=""ND~"",""ND"",RC[-8]))"
+Range("S3").Select
+Selection.Copy
+Selection.AutoFill Destination:=Range("S3:S" & lastRow8)
+
+Workbooks(macro).Activate
+
+Workbooks(filename1).Activate
+
+'FS06 Non Opex
+Sheets("Non OPEX i17").Select
+lastRow = Range("B" & Rows.Count).End(xlUp).Row
+Range("H14").Select
+    ActiveCell.FormulaR1C1 = _
+        "=IF(RC1=""IME scope FS16.4 IME"","""",SUMIFS('[" & filename4 & ".xlsx]FOR AUTOMATION'!C9,'[" & filename4 & ".xlsx]FOR AUTOMATION'!C14,RC[-6],'[" & filename4 & ".xlsx]FOR AUTOMATION'!C2,RC[-5]))"
+Range("I14").Select
+    ActiveCell.FormulaR1C1 = _
+        "=SUMIFS('TB i17 Last Month'!C[32],'TB i17 Last Month'!C[1],'Non OPEX i17'!RC[-7],'TB i17 Last Month'!C[23],'Non OPEX i17'!RC[-6])"
+Range("J14").Select
+    ActiveCell.FormulaR1C1 = "=SUM(RC[-2]:RC[-1])"
+Range("K14").Select
+    ActiveCell.FormulaR1C1 = "=-(RC[-6]-RC[-1])"
+Range("L14").Select
+    ActiveCell.FormulaR1C1 = _
+        "=IF(RC[-9]=""IDR"",RC[-1],RC[-1]/INDEX(R4C2:R4C4,MATCH(RC[-9],R3C2:R3C4,0)))"
+Range("M14").Select
+    ActiveCell.FormulaR1C1 = "=RC[-8]-RC[-3]+RC[-2]"
+
+Range("H14:M14").Select
+    Selection.Copy
+    
+Range("H14:M" & lastRow).Select
+    ActiveSheet.Paste
+
+Application.Calculation = xlAutomatic
+
+Range("H14:M" & lastRow).Select
+Selection.Copy
+
+Range("H14:M" & lastRow).Select
+Selection.PasteSpecial Paste:=xlPasteValues, Operation:=xlNone, SkipBlanks _
+        :=False, Transpose:=False
+
+'FS16.4 Opex i17
+Sheets("OPEX i17").Select
+lastRow2 = Range("B" & Rows.Count).End(xlUp).Row
+
+Range("H14").Select
+    ActiveCell.FormulaR1C1 = _
+        "=SUMIFS('TB i17 Last Month'!C[33],'TB i17 Last Month'!C[2],'OPEX i17'!RC[-5],'TB i17 Last Month'!C,'OPEX i17'!RC[-6],'TB i17 Last Month'!C[24],'OPEX i17'!RC[-4])"
+
+Range("I14").Select
+    ActiveCell.FormulaR1C1 = "=SUM(RC[-1]:RC[-1])"
+
+Range("J14").Select
+    ActiveCell.FormulaR1C1 = "=-(RC[-4]-RC[-1])"
+
+Range("K14").Select
+    ActiveCell.FormulaR1C1 = _
+        "=IF(RC[-7]=""IDR"",RC[-1],RC[-1]/INDEX(R4C2:R4C4,MATCH(RC[-7],R3C2:R3C4,0)))"
+
+Range("L14").Select
+    ActiveCell.FormulaR1C1 = "=RC[-6]-RC[-3]+RC[-2]"
+    
+Range("H14:L14").Select
+Selection.Copy
+
+Range("H14:L" & lastRow2).Select
+ActiveSheet.Paste
+
+Application.Calculation = xlAutomatic
+
+Range("H14:L" & lastRow2).Select
+Selection.Copy
+Range("H14:L" & lastRow2).Select
+Selection.PasteSpecial Paste:=xlPasteValues, Operation:=xlNone, SkipBlanks _
+        :=False, Transpose:=False
+
+'FS16.4 Dummy
+'C
+Sheets("Non OPEX i17").Select
+lastRow = Range("B" & Rows.Count).End(xlUp).Row
+ActiveSheet.Range("C14:C" & lastRow).SpecialCells(xlCellTypeVisible).Select
+    Selection.Copy
+     
+Sheets("FS16.4 Dummy").Select
+Range("C3").Select
+Selection.PasteSpecial Paste:=xlPasteValues, Operation:=xlNone, SkipBlanks _
+        :=False, Transpose:=False
+
+lastRow3 = Range("C" & Rows.Count).End(xlUp).Row
+
+Sheets("OPEX i17").Select
+lastRow2 = Range("B" & Rows.Count).End(xlUp).Row
+ActiveSheet.Range("D14:D" & lastRow2).SpecialCells(xlCellTypeVisible).Select
+    Selection.Copy
+    
+Sheets("FS16.4 Dummy").Select
+    
+Range("C" & lastRow3 + 1).Select
+Selection.PasteSpecial Paste:=xlPasteValues, Operation:=xlNone, SkipBlanks _
+        :=False, Transpose:=False
+
+lastRow4 = Range("C" & Rows.Count).End(xlUp).Row
+
+'A
+Range("A3").Select
+    ActiveCell.FormulaR1C1 = "E013"
+Range("A3").Select
+Selection.Copy
+Range("A3:A" & lastRow4).Select
+Selection.PasteSpecial Paste:=xlPasteValues, Operation:=xlNone, SkipBlanks _
+        :=False, Transpose:=False
+  
+'B
+Range("B3").Select
+    ActiveCell.FormulaR1C1 = "=TEXT(EOMONTH(TODAY(),-1),""yyyy/mm/dd"")"
+Range("B3").Select
+Selection.Copy
+Selection.AutoFill Destination:=Range("B3:B" & lastRow4)
+
+'D
+Range("D3").Select
+    ActiveCell.FormulaR1C1 = "11"
+Range("D3").Select
+Selection.Copy
+Selection.AutoFill Destination:=Range("D3:D" & lastRow4)
+
+'E
+Sheets("Non OPEX i17").Select
+lastRow = Range("B" & Rows.Count).End(xlUp).Row
+ActiveSheet.Range("B14:B" & lastRow).SpecialCells(xlCellTypeVisible).Select
+    Selection.Copy
+    
+Sheets("FS16.4 Dummy").Select
+Range("E3").Select
+Selection.PasteSpecial Paste:=xlPasteValues, Operation:=xlNone, SkipBlanks _
+        :=False, Transpose:=False
+
+lastRow3 = Range("E" & Rows.Count).End(xlUp).Row
+
+'F
+Sheets("FS16.4 Dummy").Select
+
+Range("F3").Select
+    ActiveCell.FormulaR1C1 = "ND"
+Range("F3").Select
+Selection.Copy
+Selection.AutoFill Destination:=Range("F3:F" & lastRow3)
+
+'E
+Sheets("OPEX i17").Select
+lastRow2 = Range("B" & Rows.Count).End(xlUp).Row
+ActiveSheet.Range("C14:C" & lastRow2).SpecialCells(xlCellTypeVisible).Select
+    Selection.Copy
+    
+Sheets("FS16.4 Dummy").Select
+    
+Range("E" & lastRow3 + 1).Select
+Selection.PasteSpecial Paste:=xlPasteValues, Operation:=xlNone, SkipBlanks _
+        :=False, Transpose:=False
+
+lastRow4 = Range("C" & Rows.Count).End(xlUp).Row
+
+'F
+Sheets("OPEX i17").Select
+lastRow2 = Range("B" & Rows.Count).End(xlUp).Row
+ActiveSheet.Range("B14:B" & lastRow2).SpecialCells(xlCellTypeVisible).Select
+    Selection.Copy
+    
+Sheets("FS16.4 Dummy").Select
+    
+Range("F" & lastRow3 + 1).Select
+Selection.PasteSpecial Paste:=xlPasteValues, Operation:=xlNone, SkipBlanks _
+        :=False, Transpose:=False
+
+lastRow4 = Range("C" & Rows.Count).End(xlUp).Row
+
+'H
+Range("H3").Select
+    ActiveCell.FormulaR1C1 = "0"
+Range("H3").Select
+Selection.Copy
+Selection.AutoFill Destination:=Range("H3:H" & lastRow4)
+
+'L
+Range("L3").Select
+    ActiveCell.FormulaR1C1 = _
+        "=IFERROR(IFERROR(IF(RC[-7]=""5230305"",""FREBATE_1"",IF(RC[12]=""IME scope FS16.4 IME"",""INVEXP_1"",RC[9])),RC[10]),RC[11])"
+Range("L3").Select
+Selection.Copy
+Selection.AutoFill Destination:=Range("L3:L" & lastRow4)
+
+'M
+Range("M3").Select
+    ActiveCell.FormulaR1C1 = _
+        "=IF(OR(RC[-1]=""CRE_1"",RC[-1]=""COMM_1""),""ACQ"","""")"
+Range("M3").Select
+Selection.Copy
+Selection.AutoFill Destination:=Range("M3:M" & lastRow4)
+
+Range("A1").Select
+
+'N
+Sheets("Non OPEX i17").Select
+lastRow = Range("B" & Rows.Count).End(xlUp).Row
+ActiveSheet.Range("L14:L" & lastRow).SpecialCells(xlCellTypeVisible).Select
+    Selection.Copy
+    
+Sheets("FS16.4 Dummy").Select
+Range("N3").Select
+Selection.PasteSpecial Paste:=xlPasteValues, Operation:=xlNone, SkipBlanks _
+        :=False, Transpose:=False
+
+lastRow3 = Range("N" & Rows.Count).End(xlUp).Row
+
+Sheets("OPEX i17").Select
+lastRow2 = Range("B" & Rows.Count).End(xlUp).Row
+ActiveSheet.Range("K14:K" & lastRow2).SpecialCells(xlCellTypeVisible).Select
+    Selection.Copy
+    
+Sheets("FS16.4 Dummy").Select
+    
+Range("N" & lastRow3 + 1).Select
+Selection.PasteSpecial Paste:=xlPasteValues, Operation:=xlNone, SkipBlanks _
+        :=False, Transpose:=False
+
+lastRow4 = Range("C" & Rows.Count).End(xlUp).Row
+
+
+
+
+
+
+'Sheets("Non OPEX i17").Select
+'If ActiveSheet.FilterMode Then ActiveSheet.ShowAllData
+
+'ActiveWorkbook.RefreshAll
+
+'Range("A1").Select
+'lastRow = Range("B" & Rows.Count).End(xlUp).Row
+'Range("L14" & lastRow).Select
+'    Selection.Copy
+    
+'Sheets("FS16.4 Dummy").Select
+'If ActiveSheet.FilterMode Then ActiveSheet.ShowAllData
+
+'Range("N3").Select
+'    Selection.PasteSpecial Paste:=xlPasteValues, Operation:=xlNone, SkipBlanks _
+        :=False, Transpose:=False
+
+'Range("A1").Select
+
+'ActiveWorkbook.RefreshAll
+
+'lastRow3 = Range("N" & Rows.Count).End(xlUp).Row
+
+'Sheets("OPEX i17").Select
+'Sheets("FS16.4 Dummy").Select
+'lastRow3 = Range("N" & Rows.Count).End(xlUp).Row
+
+'Sheets("OPEX i17").Select
+'If ActiveSheet.FilterMode Then ActiveSheet.ShowAllData
+
+'ActiveWorkbook.RefreshAll
+
+'lastRow2 = Range("B" & Rows.Count).End(xlUp).Row
+'ActiveSheet.Range("K14:K" & lastRow2).SpecialCells(xlCellTypeVisible).Select
+    Selection.Copy
+    
+'Sheets("FS16.4 Dummy").Select
+
+'If ActiveSheet.FilterMode Then ActiveSheet.ShowAllData
+'Range("N" & lastRow3 + 1).Select
+'Selection.PasteSpecial Paste:=xlPasteValues, Operation:=xlNone, SkipBlanks _
+'        :=False, Transpose:=False
+
+'lastRow4 = Range("C" & Rows.Count).End(xlUp).Row
+
+'Range("A1").Select
+
+'O
+Sheets("Non OPEX i17").Select
+lastRow = Range("B" & Rows.Count).End(xlUp).Row
+ActiveSheet.Range("K14:K" & lastRow).SpecialCells(xlCellTypeVisible).Select
+    Selection.Copy
+    
+Sheets("FS16.4 Dummy").Select
+Range("O3").Select
+Selection.PasteSpecial Paste:=xlPasteValues, Operation:=xlNone, SkipBlanks _
+        :=False, Transpose:=False
+
+lastRow3 = Range("O" & Rows.Count).End(xlUp).Row
+
+Sheets("OPEX i17").Select
+lastRow2 = Range("B" & Rows.Count).End(xlUp).Row
+ActiveSheet.Range("J14:J" & lastRow2).SpecialCells(xlCellTypeVisible).Select
+    Selection.Copy
+    
+Sheets("FS16.4 Dummy").Select
+    
+Range("O" & lastRow3 + 1).Select
+Selection.PasteSpecial Paste:=xlPasteValues, Operation:=xlNone, SkipBlanks _
+        :=False, Transpose:=False
+
+lastRow4 = Range("C" & Rows.Count).End(xlUp).Row
+
+'Q
+Range("Q3").Select
+    ActiveCell.FormulaR1C1 = "NULL"
+Range("Q3").Select
+Selection.Copy
+Selection.AutoFill Destination:=Range("Q3:Q" & lastRow4)
+   
+'R
+Range("R3").Select
+    ActiveCell.FormulaR1C1 = "E013_GLCOMN"
+Range("R3").Select
+Selection.Copy
+Selection.AutoFill Destination:=Range("R3:R" & lastRow4)
+
+'T
+Range("T3").Select
+    ActiveCell.FormulaR1C1 = _
+        "=CONCAT(RC[-15],""_"",IF(RC[-14]=""ND~"",""ND"",RC[-14]))"
+Range("T3").Select
+Selection.Copy
+Selection.AutoFill Destination:=Range("T3:T" & lastRow4)
+  
+'U
+Range("U3").Select
+    ActiveCell.FormulaR1C1 = _
+        "=INDEX('[" & filename7 & ".xlsx]AAE_EXPCOMP_CASHFLOW_DRIVER'!C12,MATCH(RC[-1],'[" & filename7 & ".xlsx]AAE_EXPCOMP_CASHFLOW_DRIVER'!C19,0))" & _
+        ""
+Range("U3").Select
+Selection.Copy
+Selection.AutoFill Destination:=Range("U3:U" & lastRow4)
+  
+'V
+Range("V3").Select
+    ActiveCell.FormulaR1C1 = _
+        "=INDEX('[" & filename7 & ".xlsx]AAE_EXPCOMP_CASHFLOW_DRIVER'!C12,MATCH(CONCAT(RC[-17],""_"",""ND""),'[" & filename7 & ".xlsx]AAE_EXPCOMP_CASHFLOW_DRIVER'!C19,0))" & _
+        ""
+Range("V3").Select
+Selection.Copy
+Selection.AutoFill Destination:=Range("V3:V" & lastRow4)
+    
+'W
+Range("W3").Select
+    ActiveCell.FormulaR1C1 = _
+        "=INDEX('[" & filename7 & ".xlsx]AAE_EXPCOMP_CASHFLOW_DRIVER'!C12,MATCH(CONCAT(""ND"",""_"",RC[-17]),'[" & filename7 & ".xlsx]AAE_EXPCOMP_CASHFLOW_DRIVER'!C19,0))" & _
+        ""
+Range("W3").Select
+Selection.Copy
+Selection.AutoFill Destination:=Range("W3:W" & lastRow4)
+
+Sheets("Non OPEX i17").Select
+lastRow = Range("B" & Rows.Count).End(xlUp).Row
+ActiveSheet.Range("A14:A" & lastRow).SpecialCells(xlCellTypeVisible).Select
+    Selection.Copy
+    
+'X
+Sheets("FS16.4 Dummy").Select
+Range("X3").Select
+Selection.Copy
+Range("X3").Select
+Selection.AutoFill Destination:=Range("X3:X" & lastRow4)
+
+'Cells.Select
+'Selection.Copy
+
+'Cells.Select
+'Selection.PasteSpecial Paste:=xlPasteValues, Operation:=xlNone, SkipBlanks _
+        :=False, Transpose:=False
+
+'OPEXi4
+Workbooks(macro).Activate
+
+Workbooks.Open (file10), UpdateLinks:=False
+Sheets("sheet1").Select
+
+Cells.Select
+    With Selection
+        .HorizontalAlignment = xlGeneral
+        .VerticalAlignment = xlBottom
+        .WrapText = False
+        .Orientation = 0
+        .AddIndent = False
+        .IndentLevel = 1
+        .ShrinkToFit = False
+        .ReadingOrder = xlContext
+        .MergeCells = False
+    End With
+    With Selection
+        .HorizontalAlignment = xlGeneral
+        .VerticalAlignment = xlBottom
+        .WrapText = False
+        .Orientation = 0
+        .AddIndent = False
+        .IndentLevel = 1
+        .ShrinkToFit = False
+        .ReadingOrder = xlContext
+        .MergeCells = False
+    End With
+    With Selection
+        .HorizontalAlignment = xlGeneral
+        .VerticalAlignment = xlTop
+        .WrapText = False
+        .Orientation = 0
+        .AddIndent = False
+        .IndentLevel = 0
+        .ShrinkToFit = False
+        .ReadingOrder = xlContext
+        .MergeCells = False
+    End With
+    With Selection
+        .HorizontalAlignment = xlGeneral
+        .VerticalAlignment = xlTop
+        .WrapText = False
+        .Orientation = 0
+        .AddIndent = False
+        .IndentLevel = 0
+        .ShrinkToFit = False
+        .ReadingOrder = xlContext
+        .MergeCells = False
+    End With
+    With Selection
+        .HorizontalAlignment = xlGeneral
+        .VerticalAlignment = xlTop
+        .WrapText = False
+        .Orientation = 0
+        .AddIndent = False
+        .IndentLevel = 0
+        .ShrinkToFit = False
+        .ReadingOrder = xlContext
+        .MergeCells = False
+    End With
+    With Selection
+        .HorizontalAlignment = xlGeneral
+        .VerticalAlignment = xlTop
+        .WrapText = False
+        .Orientation = 0
+        .AddIndent = False
+        .IndentLevel = 0
+        .ShrinkToFit = False
+        .ReadingOrder = xlContext
+        .MergeCells = False
+    End With
+    With Selection
+        .HorizontalAlignment = xlGeneral
+        .VerticalAlignment = xlTop
+        .WrapText = False
+        .Orientation = 0
+        .AddIndent = False
+        .IndentLevel = 0
+        .ShrinkToFit = False
+        .ReadingOrder = xlContext
+        .MergeCells = False
+    End With
+    With Selection
+        .HorizontalAlignment = xlGeneral
+        .VerticalAlignment = xlTop
+        .WrapText = False
+        .Orientation = 0
+        .AddIndent = False
+        .IndentLevel = 0
+        .ShrinkToFit = False
+        .ReadingOrder = xlContext
+        .MergeCells = False
+    End With
+    With Selection
+        .HorizontalAlignment = xlGeneral
+        .VerticalAlignment = xlTop
+        .WrapText = False
+        .Orientation = 0
+        .AddIndent = False
+        .IndentLevel = 0
+        .ShrinkToFit = False
+        .ReadingOrder = xlContext
+        .MergeCells = False
+    End With
+    With Selection
+        .HorizontalAlignment = xlGeneral
+        .VerticalAlignment = xlTop
+        .WrapText = False
+        .Orientation = 0
+        .AddIndent = False
+        .IndentLevel = 0
+        .ShrinkToFit = False
+        .ReadingOrder = xlContext
+        .MergeCells = False
+    End With
+    With Selection
+        .HorizontalAlignment = xlGeneral
+        .VerticalAlignment = xlTop
+        .WrapText = False
+        .Orientation = 0
+        .AddIndent = False
+        .IndentLevel = 0
+        .ShrinkToFit = False
+        .ReadingOrder = xlContext
+        .MergeCells = False
+    End With
+    With Selection
+        .HorizontalAlignment = xlGeneral
+        .VerticalAlignment = xlTop
+        .WrapText = False
+        .Orientation = 0
+        .AddIndent = False
+        .IndentLevel = 0
+        .ShrinkToFit = False
+        .ReadingOrder = xlContext
+        .MergeCells = False
+    End With
+    With Selection
+        .HorizontalAlignment = xlGeneral
+        .VerticalAlignment = xlTop
+        .WrapText = False
+        .Orientation = 0
+        .AddIndent = False
+        .IndentLevel = 0
+        .ShrinkToFit = False
+        .ReadingOrder = xlContext
+        .MergeCells = False
+    End With
+    With Selection
+        .HorizontalAlignment = xlGeneral
+        .VerticalAlignment = xlTop
+        .WrapText = False
+        .Orientation = 0
+        .AddIndent = False
+        .IndentLevel = 0
+        .ShrinkToFit = False
+        .ReadingOrder = xlContext
+        .MergeCells = False
+    End With
+    With Selection
+        .HorizontalAlignment = xlGeneral
+        .VerticalAlignment = xlTop
+        .WrapText = False
+        .Orientation = 0
+        .AddIndent = False
+        .IndentLevel = 0
+        .ShrinkToFit = False
+        .ReadingOrder = xlContext
+        .MergeCells = False
+    End With
+    With Selection
+        .HorizontalAlignment = xlGeneral
+        .VerticalAlignment = xlTop
+        .WrapText = False
+        .Orientation = 0
+        .AddIndent = False
+        .IndentLevel = 0
+        .ShrinkToFit = False
+        .ReadingOrder = xlContext
+        .MergeCells = False
+    End With
+    With Selection
+        .HorizontalAlignment = xlGeneral
+        .VerticalAlignment = xlTop
+        .WrapText = False
+        .Orientation = 0
+        .AddIndent = False
+        .IndentLevel = 0
+        .ShrinkToFit = False
+        .ReadingOrder = xlContext
+        .MergeCells = False
+    End With
+    With Selection
+        .HorizontalAlignment = xlGeneral
+        .VerticalAlignment = xlTop
+        .WrapText = False
+        .Orientation = 0
+        .AddIndent = False
+        .IndentLevel = 0
+        .ShrinkToFit = False
+        .ReadingOrder = xlContext
+        .MergeCells = False
+    End With
+    With Selection
+        .HorizontalAlignment = xlGeneral
+        .VerticalAlignment = xlTop
+        .WrapText = False
+        .Orientation = 0
+        .AddIndent = False
+        .IndentLevel = 0
+        .ShrinkToFit = False
+        .ReadingOrder = xlContext
+        .MergeCells = False
+    End With
+    With Selection
+        .HorizontalAlignment = xlGeneral
+        .VerticalAlignment = xlTop
+        .WrapText = False
+        .Orientation = 0
+        .AddIndent = False
+        .IndentLevel = 0
+        .ShrinkToFit = False
+        .ReadingOrder = xlContext
+        .MergeCells = False
+    End With
+    With Selection
+        .HorizontalAlignment = xlGeneral
+        .VerticalAlignment = xlTop
+        .WrapText = False
+        .Orientation = 0
+        .AddIndent = False
+        .IndentLevel = 0
+        .ShrinkToFit = False
+        .ReadingOrder = xlContext
+        .MergeCells = False
+    End With
+    With Selection
+        .HorizontalAlignment = xlGeneral
+        .VerticalAlignment = xlTop
+        .WrapText = False
+        .Orientation = 0
+        .AddIndent = False
+        .IndentLevel = 0
+        .ShrinkToFit = False
+        .ReadingOrder = xlContext
+        .MergeCells = False
+    End With
+    With Selection
+        .HorizontalAlignment = xlGeneral
+        .VerticalAlignment = xlTop
+        .WrapText = False
+        .Orientation = 0
+        .AddIndent = False
+        .IndentLevel = 0
+        .ShrinkToFit = False
+        .ReadingOrder = xlContext
+        .MergeCells = False
+    End With
+    With Selection
+        .HorizontalAlignment = xlGeneral
+        .VerticalAlignment = xlTop
+        .WrapText = False
+        .Orientation = 0
+        .AddIndent = False
+        .IndentLevel = 0
+        .ShrinkToFit = False
+        .ReadingOrder = xlContext
+        .MergeCells = False
+    End With
+    With Selection
+        .HorizontalAlignment = xlGeneral
+        .VerticalAlignment = xlTop
+        .WrapText = False
+        .Orientation = 0
+        .AddIndent = False
+        .IndentLevel = 0
+        .ShrinkToFit = False
+        .ReadingOrder = xlContext
+        .MergeCells = False
+    End With
+    With Selection
+        .HorizontalAlignment = xlGeneral
+        .VerticalAlignment = xlTop
+        .WrapText = False
+        .Orientation = 0
+        .AddIndent = False
+        .IndentLevel = 0
+        .ShrinkToFit = False
+        .ReadingOrder = xlContext
+        .MergeCells = False
+    End With
+    With Selection
+        .HorizontalAlignment = xlGeneral
+        .VerticalAlignment = xlTop
+        .WrapText = False
+        .Orientation = 0
+        .AddIndent = False
+        .IndentLevel = 0
+        .ShrinkToFit = False
+        .ReadingOrder = xlContext
+        .MergeCells = False
+    End With
+    With Selection
+        .HorizontalAlignment = xlGeneral
+        .VerticalAlignment = xlTop
+        .WrapText = False
+        .Orientation = 0
+        .AddIndent = False
+        .IndentLevel = 0
+        .ShrinkToFit = False
+        .ReadingOrder = xlContext
+        .MergeCells = False
+    End With
+    With Selection
+        .HorizontalAlignment = xlGeneral
+        .VerticalAlignment = xlTop
+        .WrapText = False
+        .Orientation = 0
+        .AddIndent = False
+        .IndentLevel = 0
+        .ShrinkToFit = False
+        .ReadingOrder = xlContext
+        .MergeCells = False
+    End With
+    With Selection
+        .HorizontalAlignment = xlGeneral
+        .VerticalAlignment = xlTop
+        .WrapText = False
+        .Orientation = 0
+        .AddIndent = False
+        .IndentLevel = 0
+        .ShrinkToFit = False
+        .ReadingOrder = xlContext
+        .MergeCells = False
+    End With
+    With Selection
+        .HorizontalAlignment = xlGeneral
+        .VerticalAlignment = xlTop
+        .WrapText = False
+        .Orientation = 0
+        .AddIndent = False
+        .IndentLevel = 0
+        .ShrinkToFit = False
+        .ReadingOrder = xlContext
+        .MergeCells = False
+    End With
+    With Selection
+        .HorizontalAlignment = xlGeneral
+        .VerticalAlignment = xlTop
+        .WrapText = False
+        .Orientation = 0
+        .AddIndent = False
+        .IndentLevel = 0
+        .ShrinkToFit = False
+        .ReadingOrder = xlContext
+        .MergeCells = False
+    End With
+    With Selection
+        .HorizontalAlignment = xlGeneral
+        .VerticalAlignment = xlBottom
+        .WrapText = False
+        .Orientation = 0
+        .AddIndent = False
+        .IndentLevel = 1
+        .ShrinkToFit = False
+        .ReadingOrder = xlContext
+        .MergeCells = False
+    End With
+    With Selection
+        .HorizontalAlignment = xlGeneral
+        .VerticalAlignment = xlBottom
+        .WrapText = False
+        .Orientation = 0
+        .AddIndent = False
+        .IndentLevel = 1
+        .ShrinkToFit = False
+        .ReadingOrder = xlContext
+        .MergeCells = False
+    End With
+    With Selection
+        .HorizontalAlignment = xlGeneral
+        .VerticalAlignment = xlBottom
+        .WrapText = False
+        .Orientation = 0
+        .AddIndent = False
+        .IndentLevel = 1
+        .ShrinkToFit = False
+        .ReadingOrder = xlContext
+        .MergeCells = False
+    End With
+    With Selection
+        .HorizontalAlignment = xlGeneral
+        .VerticalAlignment = xlBottom
+        .WrapText = False
+        .Orientation = 0
+        .AddIndent = False
+        .IndentLevel = 1
+        .ShrinkToFit = False
+        .ReadingOrder = xlContext
+        .MergeCells = False
+    End With
+    With Selection
+        .HorizontalAlignment = xlGeneral
+        .VerticalAlignment = xlTop
+        .WrapText = False
+        .Orientation = 0
+        .AddIndent = False
+        .IndentLevel = 0
+        .ShrinkToFit = False
+        .ReadingOrder = xlContext
+        .MergeCells = False
+    End With
+    With Selection
+        .HorizontalAlignment = xlGeneral
+        .VerticalAlignment = xlTop
+        .WrapText = False
+        .Orientation = 0
+        .AddIndent = False
+        .IndentLevel = 0
+        .ShrinkToFit = False
+        .ReadingOrder = xlContext
+        .MergeCells = False
+    End With
+    With Selection
+        .HorizontalAlignment = xlGeneral
+        .VerticalAlignment = xlTop
+        .WrapText = False
+        .Orientation = 0
+        .AddIndent = False
+        .IndentLevel = 0
+        .ShrinkToFit = False
+        .ReadingOrder = xlContext
+        .MergeCells = False
+    End With
+    With Selection
+        .HorizontalAlignment = xlGeneral
+        .VerticalAlignment = xlTop
+        .WrapText = False
+        .Orientation = 0
+        .AddIndent = False
+        .IndentLevel = 0
+        .ShrinkToFit = False
+        .ReadingOrder = xlContext
+        .MergeCells = False
+    End With
+    With Selection
+        .HorizontalAlignment = xlGeneral
+        .VerticalAlignment = xlTop
+        .WrapText = False
+        .Orientation = 0
+        .AddIndent = False
+        .IndentLevel = 0
+        .ShrinkToFit = False
+        .ReadingOrder = xlContext
+        .MergeCells = False
+    End With
+    With Selection
+        .HorizontalAlignment = xlGeneral
+        .VerticalAlignment = xlTop
+        .WrapText = False
+        .Orientation = 0
+        .AddIndent = False
+        .IndentLevel = 0
+        .ShrinkToFit = False
+        .ReadingOrder = xlContext
+        .MergeCells = False
+    End With
+    With Selection
+        .HorizontalAlignment = xlGeneral
+        .VerticalAlignment = xlTop
+        .WrapText = False
+        .Orientation = 0
+        .AddIndent = False
+        .IndentLevel = 0
+        .ShrinkToFit = False
+        .ReadingOrder = xlContext
+        .MergeCells = False
+    End With
+    With Selection
+        .HorizontalAlignment = xlGeneral
+        .VerticalAlignment = xlTop
+        .WrapText = False
+        .Orientation = 0
+        .AddIndent = False
+        .IndentLevel = 0
+        .ShrinkToFit = False
+        .ReadingOrder = xlContext
+        .MergeCells = False
+    End With
+    With Selection
+        .HorizontalAlignment = xlGeneral
+        .VerticalAlignment = xlTop
+        .WrapText = False
+        .Orientation = 0
+        .AddIndent = False
+        .IndentLevel = 0
+        .ShrinkToFit = False
+        .ReadingOrder = xlContext
+        .MergeCells = False
+    End With
+    With Selection
+        .HorizontalAlignment = xlGeneral
+        .VerticalAlignment = xlTop
+        .WrapText = False
+        .Orientation = 0
+        .AddIndent = False
+        .IndentLevel = 0
+        .ShrinkToFit = False
+        .ReadingOrder = xlContext
+        .MergeCells = False
+    End With
+    With Selection
+        .HorizontalAlignment = xlGeneral
+        .VerticalAlignment = xlTop
+        .WrapText = False
+        .Orientation = 0
+        .AddIndent = False
+        .IndentLevel = 0
+        .ShrinkToFit = False
+        .ReadingOrder = xlContext
+        .MergeCells = False
+    End With
+    With Selection
+        .HorizontalAlignment = xlGeneral
+        .VerticalAlignment = xlTop
+        .WrapText = False
+        .Orientation = 0
+        .AddIndent = False
+        .IndentLevel = 0
+        .ShrinkToFit = False
+        .ReadingOrder = xlContext
+        .MergeCells = False
+    End With
+    With Selection
+        .HorizontalAlignment = xlGeneral
+        .VerticalAlignment = xlBottom
+        .WrapText = False
+        .Orientation = 0
+        .AddIndent = False
+        .IndentLevel = 1
+        .ShrinkToFit = False
+        .ReadingOrder = xlContext
+        .MergeCells = False
+    End With
+    With Selection
+        .HorizontalAlignment = xlGeneral
+        .VerticalAlignment = xlBottom
+        .WrapText = False
+        .Orientation = 0
+        .AddIndent = False
+        .IndentLevel = 1
+        .ShrinkToFit = False
+        .ReadingOrder = xlContext
+        .MergeCells = False
+    End With
+    With Selection
+        .HorizontalAlignment = xlGeneral
+        .VerticalAlignment = xlBottom
+        .WrapText = False
+        .Orientation = 0
+        .AddIndent = False
+        .IndentLevel = 1
+        .ShrinkToFit = False
+        .ReadingOrder = xlContext
+        .MergeCells = False
+    End With
+    With Selection
+        .HorizontalAlignment = xlGeneral
+        .VerticalAlignment = xlBottom
+        .WrapText = False
+        .Orientation = 0
+        .AddIndent = False
+        .IndentLevel = 1
+        .ShrinkToFit = False
+        .ReadingOrder = xlContext
+        .MergeCells = False
+    End With
+    With Selection
+        .HorizontalAlignment = xlGeneral
+        .VerticalAlignment = xlBottom
+        .WrapText = False
+        .Orientation = 0
+        .AddIndent = False
+        .IndentLevel = 1
+        .ShrinkToFit = False
+        .ReadingOrder = xlContext
+        .MergeCells = False
+    End With
+    With Selection
+        .HorizontalAlignment = xlGeneral
+        .VerticalAlignment = xlBottom
+        .WrapText = False
+        .Orientation = 0
+        .AddIndent = False
+        .IndentLevel = 1
+        .ShrinkToFit = False
+        .ReadingOrder = xlContext
+        .MergeCells = False
+    End With
+    With Selection
+        .HorizontalAlignment = xlGeneral
+        .VerticalAlignment = xlBottom
+        .WrapText = False
+        .Orientation = 0
+        .AddIndent = False
+        .IndentLevel = 1
+        .ShrinkToFit = False
+        .ReadingOrder = xlContext
+        .MergeCells = False
+    End With
+    With Selection
+        .HorizontalAlignment = xlGeneral
+        .VerticalAlignment = xlBottom
+        .WrapText = False
+        .Orientation = 0
+        .AddIndent = False
+        .IndentLevel = 1
+        .ShrinkToFit = False
+        .ReadingOrder = xlContext
+        .MergeCells = False
+    End With
+    With Selection
+        .HorizontalAlignment = xlGeneral
+        .VerticalAlignment = xlBottom
+        .WrapText = False
+        .Orientation = 0
+        .AddIndent = False
+        .IndentLevel = 1
+        .ShrinkToFit = False
+        .ReadingOrder = xlContext
+        .MergeCells = False
+    End With
+    With Selection
+        .HorizontalAlignment = xlGeneral
+        .VerticalAlignment = xlBottom
+        .WrapText = False
+        .Orientation = 0
+        .AddIndent = False
+        .IndentLevel = 1
+        .ShrinkToFit = False
+        .ReadingOrder = xlContext
+        .MergeCells = False
+    End With
+    Selection.UnMerge
+
+Workbooks(filename1).Activate
+Sheets(StrsheetTBPriori4).Select
+
+Cells.Select
+    Selection.ClearContents
+
+Workbooks(Filename10).Activate
+
+Cells.Select
+    Selection.Copy
+
+Workbooks(filename1).Activate
+Sheets(StrsheetTBPriori4).Select
+
+Cells.Select
+Selection.PasteSpecial Paste:=xlPasteValues, Operation:=xlNone, SkipBlanks _
+        :=False, Transpose:=False
+
+lastRow = Range("A" & Rows.Count).End(xlUp).Row
+lastRow2 = ActiveSheet.Range("A" & Rows.Count).End(xlUp).Offset(1, 0).SpecialCells(xlCellTypeVisible)(1).Row
+
+Rows("15:15").Select
+    Selection.AutoFilter
+
+Sheets(StrsheetTBPriori4).Select
+Sheets(StrsheetTBPriori4).Name = StrsheetTBCurrenti4
+
+Sheets(StrsheetTBCurrenti4).Select
+
+lastRow6 = Range("A" & Rows.Count).End(xlUp).Row
+
+Range("AJ14").Select
+ActiveCell.FormulaR1C1 = "in scope FS16.4"
+
+Rows("14:14").Select
+    Selection.AutoFilter
+
+Range("AJ15").Select
+ ActiveCell.FormulaR1C1 = _
+        "=INDEX('[WP FS16.4 Template v6.xlsx]HFM'!C9,MATCH(RC[-26],'[WP FS16.4 Template v6.xlsx]HFM'!C7,0))"
+Range("AJ15").Select
+Selection.AutoFill Destination:=Range("AJ15:AJ" & lastRow6), Type:=xlFillDefault
+
+ActiveSheet.Range("$A$14:$AJ" & lastRow6).AutoFilter Field:=8, Criteria1:="00000"
+With Worksheets(StrsheetTBCurrenti4).AutoFilter.Range
+       Range("H" & .Offset(1, 0).SpecialCells(xlCellTypeVisible)(1).Row).Select
+    End With
+     ActiveCell.FormulaR1C1 = "ND"
+With Worksheets(StrsheetTBCurrenti4).AutoFilter.Range
+       Range("H" & .Offset(1, 0).SpecialCells(xlCellTypeVisible)(1).Row).Select
+    End With
+Selection.Copy
+
+ActiveSheet.Range("H15:H" & lastRow6).SpecialCells(xlCellTypeVisible).Select
+ActiveSheet.Paste
+
+If ActiveSheet.FilterMode Then ActiveSheet.ShowAllData
+
+Workbooks(filename1).Activate
+
+ActiveWorkbook.RefreshAll
+
+Sheets("OPEX i4").Select
+Range("A1").Select
+lastRow5 = Range("B" & Rows.Count).End(xlUp).Row
+
+Range("H14").Select
+    ActiveCell.FormulaR1C1 = _
+        "=SUMIFS('TB i17 Last Month'!C[33],'TB i17 Last Month'!C[2],'OPEX i4'!RC[-5],'TB i17 Last Month'!C,'OPEX i4'!RC[-6],'TB i17 Last Month'!C[24],'OPEX i4'!RC[-4])"
+Range("I14").Select
+    ActiveCell.FormulaR1C1 = _
+        "=SUMIFS('FS16.4 Dummy'!C[6],'FS16.4 Dummy'!C[-4],'OPEX i4'!RC[-6],'FS16.4 Dummy'!C[-3],'OPEX i4'!RC[-7],'FS16.4 Dummy'!C[-6],'OPEX i4'!RC[-5])"
+Range("J14").Select
+    ActiveCell.FormulaR1C1 = "=SUM(RC[-2]:RC[-1])"
+Range("K14").Select
+    ActiveCell.FormulaR1C1 = "=RC[-1]-RC[-6]"
+Range("L14").Select
+    ActiveCell.FormulaR1C1 = _
+        "=IF(RC[-1]=0,""passed"",""please adjust FS16.4 MTD OC"")"
+Range("M14").Select
+    ActiveCell.FormulaR1C1 = _
+        "=IF(RC[-1]=""please adjust FS16.4 MTD OC"",-RC[-2],0)"
+
+Range("H14:M14").Select
+    Selection.Copy
+    
+Range("H14:M" & lastRow5).Select
+    ActiveSheet.Paste
+
+Range("H14:M" & lastRow5).Select
+Selection.Copy
+
+'Range("H14:M" & lastRow5).Select
+'Selection.PasteSpecial Paste:=xlPasteValues, Operation:=xlNone, SkipBlanks _
+'        :=False, Transpose:=False
+
+ActiveWorkbook.RefreshAll
+
+ChDir strPath
+    ActiveWorkbook.SaveAs Filename:= _
+        strPath & strSave _
+        , FileFormat:=xlOpenXMLWorkbook, CreateBackup:=False
+
+Workbooks(macro).Activate
+
+Range("G10").Select
+Selection.Copy
+
+Range("G9").Select
+    Selection.PasteSpecial Paste:=xlPasteValues, Operation:=xlNone, SkipBlanks _
+        :=False, Transpose:=False
+
+Workbooks(macro).Activate
+
+
+MsgBox "Extract Data Done"
+
+End Sub

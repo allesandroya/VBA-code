@@ -1,0 +1,128 @@
+Sub Extract_TB()
+
+macro = Range("macro")
+file = Range("filedirect")
+Filename = Range("filename")
+file1 = Range("filedirect1")
+filename1 = Range("filename1")
+file2 = Range("filedirect2")
+filename2 = Range("filename2")
+file3 = Range("filedirect3")
+filename3 = Range("filename3")
+file4 = Range("filedirect4")
+filename4 = Range("filename4")
+
+Dim lastRow As Long
+Dim lastRow1 As Long
+Dim lastRow2 As Long
+Dim lastRow3 As Long
+Dim lastRow4 As Long
+Dim lastRow5 As Long
+Dim lastRow6 As Long
+Dim lastRow8 As Long
+
+StrsheetTBPrior = Range("G3").Value
+StrsheetTBCurrent = Range("G4").Value
+
+Workbooks.Open (file4), UpdateLinks:=False
+
+Workbooks(macro).Activate
+
+Workbooks.Open (file1), UpdateLinks:=False
+
+Workbooks(filename1).Activate
+Sheets(StrsheetTBPrior).Select
+
+Cells.Select
+    Selection.ClearContents
+
+Workbooks(Filename).Activate
+
+Cells.Select
+    Selection.Copy
+
+Workbooks(filename1).Activate
+Sheets(StrsheetTBPrior).Select
+
+Cells.Select
+Selection.PasteSpecial Paste:=xlPasteValues, Operation:=xlNone, SkipBlanks _
+        :=False, Transpose:=False
+
+lastRow = Range("A" & Rows.Count).End(xlUp).Row
+lastRow2 = ActiveSheet.Range("A" & Rows.Count).End(xlUp).Offset(1, 0).SpecialCells(xlCellTypeVisible)(1).Row
+
+Rows("15:15").Select
+    Selection.AutoFilter
+
+Sheets(StrsheetTBPrior).Select
+Sheets(StrsheetTBPrior).Name = StrsheetTBCurrent
+
+Range("AR15").Select
+ActiveCell.FormulaR1C1 = "in scope FS16.4"
+
+Range("AR16").Select
+ActiveCell.FormulaR1C1 = _
+        "=INDEX(HFM!C[-35],MATCH(RC[-34],HFM!C[-37],0))"
+Selection.AutoFill Destination:=Range("AR16:AR" & lastRow), Type:=xlFillDefault
+
+ActiveSheet.Range("$A$15:$AR" & lastRow).AutoFilter Field:=8, Criteria1:="00000"
+With Worksheets(StrsheetTBCurrent).AutoFilter.Range
+       Range("H" & .Offset(1, 0).SpecialCells(xlCellTypeVisible)(1).Row).Select
+    End With
+     ActiveCell.FormulaR1C1 = "ND"
+With Worksheets(StrsheetTBCurrent).AutoFilter.Range
+       Range("H" & .Offset(1, 0).SpecialCells(xlCellTypeVisible)(1).Row).Select
+    End With
+Selection.Copy
+
+ActiveSheet.Range("H16:H" & lastRow).SpecialCells(xlCellTypeVisible).Select
+ActiveSheet.Paste
+
+If ActiveSheet.FilterMode Then ActiveSheet.ShowAllData
+
+Sheets("Non OPEX i17").Select
+    Range("B4").Select
+    ActiveCell.FormulaR1C1 = "='FX Rate'!R[36]C"
+    Range("C4").Select
+    ActiveCell.FormulaR1C1 = "='FX Rate'!R[36]C[-1]/'FX Rate'!R[31]C[-1]"
+    Range("D4").Select
+    ActiveCell.FormulaR1C1 = "='FX Rate'!R[36]C[-2]/'FX Rate'!R[38]C[-2]"
+
+Sheets("OPEX i17").Select
+    Range("B4").Select
+    ActiveCell.FormulaR1C1 = "='FX Rate'!R[36]C"
+    Range("C4").Select
+    ActiveCell.FormulaR1C1 = "='FX Rate'!R[36]C[-1]/'FX Rate'!R[31]C[-1]"
+    Range("D4").Select
+    ActiveCell.FormulaR1C1 = "='FX Rate'!R[36]C[-2]/'FX Rate'!R[38]C[-2]"
+    Range("E4").Select
+
+ActiveWorkbook.RefreshAll
+    Sheets("Non OPEX i17").Select
+
+Workbooks(macro).Activate
+
+Range("G4").Select
+Selection.Copy
+
+Range("G3").Select
+    Selection.PasteSpecial Paste:=xlPasteValues, Operation:=xlNone, SkipBlanks _
+        :=False, Transpose:=False
+
+Workbooks(macro).Activate
+
+MsgBox "Pivot Updated"
+
+End Sub
+
+
+
+
+
+
+
+
+
+
+
+
